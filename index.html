@@ -44,6 +44,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "WebbyWonder",
+  "alternateName": "WebGeeks",
   "url": "https://webbywonder.in/",
   "image": "https://webbywonder.in/og-image.png",
   "description": "A small engineering studio in Mumbai. We build apps, AI agents and automation, and offer fractional technical leadership.",
@@ -105,6 +106,9 @@
   }
   .mark{font-size:clamp(19px,2.4vw,23px);font-weight:700;letter-spacing:-.02em;white-space:nowrap;}
   .mark .c{color:var(--accent);}
+  .brand{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap;}
+  .former{font-size:11px;letter-spacing:.04em;color:var(--muted);white-space:nowrap;
+    padding-left:11px;border-left:1px solid var(--line);}
   .status{
     font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--muted);
     display:flex;align-items:center;gap:9px;letter-spacing:.01em;white-space:nowrap;
@@ -197,7 +201,10 @@
 <main class="page" data-screen-label="WebbyWonder home">
 
   <header class="head">
-    <div class="mark">webby<span class="c">wonder</span><span class="c">_</span></div>
+    <div class="brand">
+      <div class="mark">webby<span class="c">wonder</span><span class="c">_</span></div>
+      <span class="former mono">formerly WebGeeks</span>
+    </div>
     <div class="status mono"><span class="sq"></span>STATUS: open to new projects</div>
   </header>
 
