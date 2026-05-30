@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WebbyWonder — Apps, AI &amp; Automation, built by engineers</title>
+<meta name="description" content="WebbyWonder is a small engineering studio in Mumbai led by Darshan Gada. We build apps, AI agents and automation, and offer fractional technical leadership." />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="WebbyWonder — Apps, AI &amp; Automation" />
+<meta property="og:description" content="A small engineering studio in Mumbai. Apps, AI agents & automation, and fractional technical leadership." />
+<meta property="og:url" content="https://webbywonder.in" />
+<meta name="theme-color" content="#FCFCFB" />
+
+<!-- Favicon: WW monogram, signal blue -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231F5EFF'/%3E%3Ctext x='16' y='22' font-family='Space Grotesk, sans-serif' font-size='15' font-weight='700' text-anchor='middle' fill='white'%3EW%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --bg:#FCFCFB;
+    --ink:#111110;
+    --muted:#6E6E66;
+    --soft:#54534B;
+    --line:#E2E2DC;
+    --line-soft:#ECECE6;
+    --accent:#1F5EFF;
+    --green:#16A34A;
+    --grid:#EEEEEA;
+    --card:#ffffff;
+    --pad: clamp(20px, 4vw, 56px);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Space Grotesk',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+
+  /* Page shell — fills viewport, hairline grid backdrop */
+  .page{
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size:48px 48px;
+    background-position:-1px -1px;
+  }
+
+  /* Header */
+  .head{
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    padding:22px var(--pad);
+    border-bottom:1px solid var(--line);
+    background:var(--bg);
+  }
+  .mark{font-size:clamp(19px,2.4vw,23px);font-weight:700;letter-spacing:-.02em;white-space:nowrap;}
+  .mark .c{color:var(--accent);}
+  .status{
+    font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--muted);
+    display:flex;align-items:center;gap:9px;letter-spacing:.01em;white-space:nowrap;
+  }
+  .sq{
+    width:8px;height:8px;background:var(--green);display:inline-block;border-radius:2px;
+    box-shadow:0 0 0 3px rgba(22,163,74,.16);
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 3px rgba(22,163,74,.16);}50%{box-shadow:0 0 0 5px rgba(22,163,74,.05);}}
+
+  /* Hero */
+  .hero{padding:clamp(36px,6vh,64px) var(--pad) clamp(28px,4vh,48px);}
+  .tag{
+    font-family:'JetBrains Mono',monospace;
+    font-size:clamp(12px,1.4vw,13px);color:var(--accent);
+    margin:0 0 22px;letter-spacing:.02em;
+  }
+  h1{
+    font-size:clamp(32px,5.4vw,56px);font-weight:600;line-height:1.07;
+    letter-spacing:-.025em;margin:0;max-width:18ch;
+    text-wrap:balance;
+  }
+  h1 .u{color:var(--accent);}
+  .sub{
+    font-size:clamp(15px,1.9vw,17px);line-height:1.55;color:var(--soft);
+    max-width:58ch;margin:24px 0 0;
+  }
+
+  /* Services */
+  .svcs{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    margin:0 var(--pad);
+    border:1px solid var(--line);border-radius:14px;
+    background:var(--card);overflow:hidden;
+  }
+  .svc{padding:26px clamp(20px,2.2vw,30px) 28px;border-right:1px solid var(--line-soft);}
+  .svc:last-child{border-right:0;}
+  .idx{
+    font-family:'JetBrains Mono',monospace;font-size:12px;color:#9A9A90;
+    margin-bottom:18px;display:flex;justify-content:space-between;
+  }
+  .idx .k{color:var(--accent);}
+  .st{font-size:clamp(15px,1.8vw,17px);font-weight:600;letter-spacing:-.01em;margin-bottom:9px;}
+  .sd{font-size:13.5px;line-height:1.5;color:var(--muted);}
+
+  /* Footer / contact */
+  .foot{
+    margin-top:auto;
+    display:flex;justify-content:space-between;align-items:center;gap:24px;
+    padding:24px var(--pad);background:var(--bg);
+  }
+  .cred{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--muted);line-height:1.65;margin:0;}
+  .cred b{color:var(--ink);font-weight:700;}
+  .cred-link{color:inherit;text-decoration:none;border-bottom:1.5px solid var(--accent);padding-bottom:1px;transition:color .15s;}
+  .cred-link:hover{color:var(--accent);}
+  .contact{display:flex;align-items:center;gap:22px;flex-wrap:wrap;justify-content:flex-end;}
+  .email-wrap{display:flex;align-items:center;gap:10px;}
+  .prompt{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:15px;}
+  .email{
+    font-family:'JetBrains Mono',monospace;font-size:clamp(13px,1.6vw,15px);color:var(--ink);
+    text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:2px;
+    transition:color .15s;
+  }
+  .email:hover{color:var(--accent);}
+  .socials{display:flex;gap:16px;}
+  .socials a{
+    font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted);
+    text-decoration:none;transition:color .15s;
+  }
+  .socials a:hover{color:var(--ink);}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:1024px){
+    .svc{padding-left:clamp(18px,2vw,24px);padding-right:clamp(18px,2vw,24px);}
+  }
+  @media (max-width:640px){
+    .page{min-height:auto;}
+    .head{flex-direction:column;align-items:flex-start;gap:12px;}
+    .svcs{grid-template-columns:1fr;}
+    .svc{border-right:0;border-bottom:1px solid var(--line-soft);}
+    .svc:last-child{border-bottom:0;}
+    .foot{flex-direction:column;align-items:flex-start;gap:18px;}
+    .contact{justify-content:flex-start;}
+    h1{font-size:clamp(30px,8vw,40px);}
+  }
+</style>
+</head>
+<body>
+<main class="page" data-screen-label="WebbyWonder home">
+
+  <header class="head">
+    <div class="mark">webby<span class="c">wonder</span><span class="c">_</span></div>
+    <div class="status mono"><span class="sq"></span>STATUS: open to new projects</div>
+  </header>
+
+  <section class="hero">
+    <p class="tag mono">// apps · ai · automation — built by engineers</p>
+    <h1>We build the app, the <span class="u">agent</span>, and the automation in between.</h1>
+    <p class="sub">A small engineering studio in Mumbai, led by Darshan Gada. <span id="yrs">10</span>+ years shipping production software — now AI-native, end to end.</p>
+  </section>
+
+  <section class="svcs" aria-label="Services">
+    <article class="svc">
+      <div class="idx mono"><span class="k">01</span><span>/svc</span></div>
+      <div class="st">App Engineering</div>
+      <div class="sd">Web apps, APIs and CLIs. Sites only when they ship with an app.</div>
+    </article>
+    <article class="svc">
+      <div class="idx mono"><span class="k">02</span><span>/svc</span></div>
+      <div class="st">AI &amp; Automation</div>
+      <div class="sd">Agents, RAG pipelines, workflows, skills and plugins.</div>
+    </article>
+    <article class="svc">
+      <div class="idx mono"><span class="k">03</span><span>/svc</span></div>
+      <div class="st">Fractional Lead</div>
+      <div class="sd">Tech lead, solution architect and reviewer, on demand.</div>
+    </article>
+  </section>
+
+  <footer class="foot">
+    <p class="cred mono">// behind <a class="cred-link" href="https://countrystatecity.in" target="_blank" rel="noopener"><b>Country State City</b></a> — open geo-data<br />// <b>50+ devs</b> · <b id="reqs">5.1B+</b> requests served</p>
+    <div class="contact">
+      <div class="socials">
+        <a href="https://github.com/dr5hn" target="_blank" rel="noopener">GitHub↗</a>
+        <a href="https://linkedin.com/in/dr5hn" target="_blank" rel="noopener">LinkedIn↗</a>
+      </div>
+      <div class="email-wrap">
+        <span class="prompt mono">→</span>
+        <a class="email" id="email-link" rel="nofollow">[ email ]</a>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  // Years of experience — auto-increments each year (career start: 2016)
+  (function(){
+    var y = document.getElementById('yrs');
+    if(y){ y.textContent = Math.max(10, new Date().getFullYear() - 2016); }
+  })();
+
+  // Live cumulative request count from the Country State City API
+  (function(){
+    var el = document.getElementById('reqs');
+    if(!el) return;
+    function fmt(n){
+      if(n >= 1e9) return (n/1e9).toFixed(1).replace(/\.0$/,'') + 'B';
+      if(n >= 1e6) return (n/1e6).toFixed(1).replace(/\.0$/,'') + 'M';
+      if(n >= 1e3) return (n/1e3).toFixed(1).replace(/\.0$/,'') + 'K';
+      return String(n);
+    }
+    fetch('https://api.countrystatecity.in/stats')
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        var n = d && d.totalRequests;
+        if(typeof n === 'number' && n > 0){ el.textContent = fmt(n) + '+'; }
+      })
+      .catch(function(){ /* keep baked-in fallback */ });
+  })();
+
+  // Assemble email at runtime so the address never appears in the raw HTML
+  (function(){
+    var a = document.getElementById('email-link');
+    if(!a) return;
+    var user = ['gada','darshan'].join('');
+    var domain = ['gmail','com'].join('.');
+    var addr = user + String.fromCharCode(64) + domain;
+    a.href = 'mailto:' + addr;
+    a.textContent = addr;
+  })();
+</script>
+
+</body>
+</html>
